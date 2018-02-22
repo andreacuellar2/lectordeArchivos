@@ -47,16 +47,16 @@ public class PrincipalTest {
      */
     @Test
     public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Principal.main(args);
+//        System.out.println("main");
+//        String[] args = null;
+//        Principal.main(args);
          try {
             ManageFIle mf = new ManageFIle();
             InputStream is = mf.getFile();
             List<Objeto> lista = mf.leerCSV(is);
             
             for (Objeto obj: lista) {
-                System.out.println("Objeto: " + obj.getColum1());
+                System.out.println("Objeto: " + obj.getColum1() + obj.getColum2());
             }
 
         } catch (Exception ex) {
